@@ -1,0 +1,130 @@
+:root {
+  --font-base: "Roboto", sans-serif;
+  --primary: #3498db;
+  --secondary: #2c3e50;
+  --accent: #2980b9;
+  --light: #ecf0f1;
+  --dark: #34495e;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-base);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light);
+  margin: 0;
+}
+
+.title {
+  color: var(--primary);
+  margin-bottom: 40px;
+}
+
+.chatContainer {
+  width: 350px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 20px;
+  border: 2px solid var(--dark);
+  background-color: var(--white);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  min-height: 300px;
+  position: relative;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+header .username {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+main {
+  width: 100%;
+  flex-grow: 1;
+  overflow-y: auto;
+  position: relative;
+}
+main .chatMessage {
+  width: 100%;
+  min-height: 200px;
+  max-height: 200px;
+  overflow-y: auto;
+  border-radius: 10px;
+  border: 1px solid var(--dark);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main .chatMessage .connection {
+  text-align: center;
+  color: var(--accent);
+}
+main .chatMessage .messageUser,
+main .chatMessage .otherUser {
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+main .chatMessage .messageUser {
+  align-self: flex-end;
+  background-color: var(--primary);
+  color: var(--white);
+}
+main .chatMessage .otherUser {
+  background-color: var(--light);
+}
+main .typingContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: 5px;
+}
+main .typing {
+  font-size: 0.8rem;
+  color: var(--dark);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+footer input {
+  flex-grow: 1;
+  border: none;
+  border-bottom: 2px solid var(--dark);
+  padding: 5px;
+  font-size: 1rem;
+}
+footer button {
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  margin: 10px 10px;
+  cursor: pointer;
+}
